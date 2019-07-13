@@ -224,6 +224,15 @@ body {
         p {
             font-family: 'Roboto Slab', serif;
             font-weight: 700;
+            margin-right: 15px;
+        }
+        &__box {
+            list-style-type: none;
+            display: flex;
+            &>li>a {
+                color: $accent-color;
+                margin: 0 5px 0 10px;
+            }
         }
     }
     &-table {
