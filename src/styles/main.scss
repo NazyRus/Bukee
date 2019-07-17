@@ -85,6 +85,10 @@ body {
 }
 .block-text {
     flex-basis: calc(100% - 500px);
+    &--right {
+        margin-left: 108px;
+        margin-top: -19px;
+    }
     &__name {
         font-family: 'Open Sans', serif;
         font-size: 18px;
@@ -109,6 +113,39 @@ body {
             letter-spacing: 0.9px;
         }
     }
+    &__item {
+        font-size: 15px;
+        font-family: 'Open Sans', serif;
+        margin-top: 47px;
+        letter-spacing: 0.7px;
+        &_title {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+            margin-top: 8px;
+            letter-spacing: 0.9px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        &_desc {
+            line-height: 23.5px;
+        }
+        &_btn {
+            display: block;
+            color: $Light-color;
+            background-color: $accent-color;
+            width: 135px;
+            text-decoration: none;
+            border-radius: 3px;
+            text-align: center;
+            margin-top: 25px;
+            padding: 15px 0;
+            letter-spacing: 0.7px;
+            font-size: 18px;
+            margin-bottom: 60px;
+            font-family: 'Roboto Slab', serif;
+            box-shadow: 0 2px #b2f1be;
+        }
+    }
     &__description {
         font-size: 15px;
         font-family: 'Open Sans', serif;
@@ -121,20 +158,53 @@ body {
         display: block;
         color: $Light-color;
         background-color: $accent-color;
-        width: 250px;
+        width: 235px;
         text-decoration: none;
         border-radius: 3px;
         text-align: center;
-        margin-top: 50px;
+        margin-top: 48px;
         padding: 15px 0;
         letter-spacing: 0.7px;
         font-size: 18px;
         margin-bottom: 20px;
         font-family: 'Roboto Slab', serif;
+        box-shadow: 0 2px #b2f1be;
+    }
+    &__btn--main {
+        box-shadow: 0 2px #59bb88;
+        width: 250px;
+        
     }
     &__min {
         font-style: italic;
         font-size: 12px;
+    }
+    &-item {
+        &__date {
+            font-size: 15px;
+        }
+        &__title {
+            font-size: 18px;
+        }
+        &__desc {
+            font-size: 15px;
+        }
+        &__btn {
+            display: block;
+            color: $Light-color;
+            background-color: $accent-color;
+            width: 135px;
+            text-decoration: none;
+            border-radius: 3px;
+            text-align: center;
+            margin-top: 48px;
+            padding: 15px 0;
+            letter-spacing: 0.7px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-family: 'Roboto Slab', serif;
+            box-shadow: 0 2px #b2f1be;
+        }
     }
 
 }
@@ -183,7 +253,7 @@ body {
     padding-bottom: 151px;
     &_grey {
         background-color: $bg-light-color;
-        padding-bottom: 245px;
+        padding-bottom: 243px;
     }
     &__title {
         font-size: 48px;
@@ -197,13 +267,14 @@ body {
         font-size: 18px;
         letter-spacing: 0.9px;
         font-family: 'Roboto Slab', serif;
-        margin-bottom: 86px;
+        margin-bottom: 85px;
     }
 }
 .block-autor {
     display: flex;
     justify-content: space-between;
 }
+
 .block-ava {
     position: relative;
     &__svg {
@@ -211,15 +282,25 @@ body {
         z-index: -1;
         right: 0;
     }
+    &__svg--left {
+        right: inherit;
+        margin-right: 44px;
+        
+    }
     &__img {
         margin-top: 48px;
         margin-right: 44px;
+    }
+    &__img--left {
+        margin-top: 49px;
+        margin-left: 51px;
+        margin-right: 0;
     }
 }
 .block-counter {
     display: flex;
     justify-content: space-around;
-    margin-top: 180px;
+    margin-top: 181px;
     p {
         font-family: 'Open Sans', serif;
         text-align: center;
@@ -300,14 +381,33 @@ body {
         }
     }
     &-btn {
-        background-color: $accent-color;
+        background: linear-gradient(to top left, #65e49c, #65e4b0);
+        border: none;
+        border-radius: 3px;
         width: 135px;
-        padding: 11px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
         font-family: 'Roboto Slab', serif;
-        font-weight: 400;
-        color: $Light-color;
         font-size: 18px;
-        margin-top: 26px;
+        font-weight: 400;
+        text-decoration: none;
+        height: 49px;
+        color: $Light-color;
+        margin-top: 24px;
+        letter-spacing: 0.7px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 20px;
+            width: 100%;
+            background-color: #adedbb;
+            bottom: -2px;
+            z-index: -1;
+            border-radius: 3px;
+        }
     }
 }
 .block-other {
@@ -323,6 +423,7 @@ body {
         margin-bottom: 34px;
         border-radius: 5px;
         position: relative;
+        margin-top: 4px;
         &_title {
             position: absolute;
             color: $Light-color;
@@ -373,6 +474,9 @@ body {
         margin-top: 20px;
     }
     &__btn {
+        background: linear-gradient(to top left, #65e49c, #65e4b0);
+        border: none;
+        border-radius: 3px;
         width: 220px;
         justify-content: center;
         display: flex;
@@ -382,10 +486,21 @@ body {
         font-size: 18px;
         font-weight: 400;
         text-decoration: none;
-        background-color: $accent-color;
         height: 49px;
         color: $Light-color;
         margin-top: 87px;
         letter-spacing: 0.7px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 20px;
+            width: 100%;
+            background-color: #adedbb;
+            bottom: -2px;
+            z-index: -1;
+            border-radius: 3px;
+        }
     }
 }
