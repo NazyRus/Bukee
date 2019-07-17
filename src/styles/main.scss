@@ -10,6 +10,7 @@ $Light-color:#fff;
 $accent-color:#65e496;
 $bg-light-color:#f5f6fa;
 $bg-dark-color:#44444f;
+$grey-color: #9191b5;
 
 h1, h2, h3, h4, p {
     padding: 0;
@@ -501,6 +502,69 @@ body {
             bottom: -2px;
             z-index: -1;
             border-radius: 3px;
+        }
+    }
+}
+
+.footer {
+    padding: 160px 0;
+    background-color: $bg-dark-color;
+    color: $grey-color;
+    .block-footer {
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Open Sans', serif;
+        font-size: 15px;
+        &>div {
+            flex-basis: 30%;
+            letter-spacing: 0.6px;
+        }
+        &__logo {
+            display: block;
+            width: 137px;
+            height: 28px;
+            background-image: url(../img/Logo-footer.svg);
+        }
+        &__text {
+            line-height: 24px;
+            margin-top: 25px;
+            letter-spacing: 0.6px;
+            width: 370px;
+            span {
+                display: block;
+                margin-top: 25px;
+            }
+        }
+        &__title {
+            color: $accent-color;
+            font-family: 'Roboto Slab', serif;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-top: 10px;
+            margin-left: 80px;
+        }
+        &__list {
+            list-style-type: none;
+            margin-top: 20px;
+            line-height: 28px;
+            margin-left: 81px;
+            a {
+                color: $grey-color;
+                display: block;
+                line-height: 24px;
+                text-decoration: none;
+            }
+        }
+        &__social {
+            list-style-type: none;
+            display: flex;
+            margin-left: 80px;
+            &_btn {
+                color: $accent-color;
+                margin-right: 12.5px;
+                margin-top: 14px;
+                display: block;
+            }
         }
     }
 }
