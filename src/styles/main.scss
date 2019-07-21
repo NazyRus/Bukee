@@ -32,6 +32,8 @@ body {
 .wrap {
     max-width: 1170px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .page-main {
@@ -48,8 +50,7 @@ body {
     align-items: center;
     max-width: 1170px;
     margin: 0 auto;
-    padding-top: 50px;
-    padding-bottom: 180px;
+    padding: 50px 15px 180px 15px;
     &__logo {
         display: block;
         width: 137px;
@@ -251,10 +252,17 @@ body {
 }
 .page {
     padding-top: 159px;
-    padding-bottom: 151px;
+    padding-bottom: 154px;
+    position: relative;
     &_grey {
         background-color: $bg-light-color;
         padding-bottom: 243px;
+        padding-top: 145px;
+    }
+    &_blog {
+        background-color: $bg-light-color;
+        padding-bottom: 145px;
+        padding-top: 127px;
     }
     &__title {
         font-size: 48px;
@@ -269,6 +277,12 @@ body {
         letter-spacing: 0.9px;
         font-family: 'Roboto Slab', serif;
         margin-bottom: 85px;
+    }
+    &__svg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
     }
 }
 .block-autor {
@@ -302,6 +316,7 @@ body {
     display: flex;
     justify-content: space-around;
     margin-top: 181px;
+    margin-bottom: 10px;
     p {
         font-family: 'Open Sans', serif;
         text-align: center;
@@ -492,6 +507,7 @@ body {
         margin-top: 87px;
         letter-spacing: 0.7px;
         position: relative;
+        margin-bottom: 8px;
         &::before {
             content: '';
             position: absolute;
@@ -505,19 +521,102 @@ body {
         }
     }
 }
-
+.page-carousel {
+    padding-bottom:222px;
+}
 .block-carousel {
     text-align: center;
     h3 {
         color: $accent-color;
-
+        margin-bottom: 2px;
     }
-    p {
+    &-ava {
+        position: relative;
+        width: 152px;
+        height: 152px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 27px;
+        margin-top: 64px;
+    }
+    &-bq {
+        position: absolute;
+        display: block;
+        background-image: url(../img/bq.png);
+        background-repeat: no-repeat;
+        width: 48px;
+        height: 42px;
+        top: 0;
+        left: 117px;
+    }
+    &__expert {
         color: $grey-color;
         font-family: 'Open Sans', serif;
+        letter-spacing: 0.75px;
+        max-width: 760px;
+        line-height: 27px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    &__desc {
+        color: $grey-color;
+        font-family: 'Open Sans', serif;
+        letter-spacing: 0.75px;
+        max-width: 760px;
+        line-height: 27px;
+        margin: 0 auto;
+        margin-bottom: 44px;
+    }
+    
+    &-thumb {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        width: 152px;
+        height: 152px;
+        border-radius: 100%;
+        img {
+            width: 152px;
+            height: 152px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
     }
 }
-
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    &>li {
+        margin: 0 5px;
+        &>button {
+            text-indent: -9999px;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            border: none;
+            background-color: $accent-color;
+            line-height: 8px;
+            font-size: 0;
+            cursor: pointer;
+            padding: 5px;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &>li.slick-active {
+        &>button {
+            width: 37px;
+            border-radius: 10px;
+        }
+    }
+}
 
 
 .block-blog {

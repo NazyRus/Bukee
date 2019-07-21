@@ -29,6 +29,7 @@
 	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css" integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/8a0c8a7886.js"></script>
         <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     </head>
     <body>
         <div class="page-main">
@@ -178,29 +179,45 @@
             </div>
         </div>
         <!-- page slick -->
-        <div class="page">
+        <div class="page page-carousel">
             <div class="wrap">
                 <div class="block-carousel">
                     <div>
-                        <div class="block-carousel-thumb">
-                            <img src="../img/slide.png" alt="photo">
+                        <div class="block-carousel-ava">
+                            <div class="block-carousel-thumb">
+                                <img src="../img/feadback.png" alt="photo">
+                            </div>
+                            <span class="block-carousel-bq"></span>
                         </div>
                         <h3>Kate Dennings</h3>
-                        <p>Calligraphy Expert</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        <p class="block-carousel__expert">Calligraphy Expert</p>
+                        <p class="block-carousel__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                     </div>
                     <div>
+                        <div class="block-carousel-ava">
+                            <div class="block-carousel-thumb">
+                                <img src="../img/feadback.png" alt="photo">
+                            </div>
+                            <span class="block-carousel-bq"></span>
+                        </div>
                         <h3>Kate Dennings</h3>
-                        <p>Calligraphy Expert</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        <p class="block-carousel__expert">Calligraphy Expert</p>
+                        <p class="block-carousel__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                     </div>
                     <div>
+                        <div class="block-carousel-ava">
+                            <div class="block-carousel-thumb">
+                                <img src="../img/feadback.png" alt="photo">
+                            </div>
+                            <span class="block-carousel-bq"></span>
+                        </div>
                         <h3>Kate Dennings</h3>
-                        <p>Calligraphy Expert</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        <p class="block-carousel__expert">Calligraphy Expert</p>
+                        <p class="block-carousel__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                     </div>
                 </div>
             </div>
+            <svg class="page__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 849"><path d="M-1 0l802 61 799-61v789l-799 60-802-60V0z" fill="#44444f" fill-rule="evenodd"/></svg>
         </div>
         
         
@@ -236,7 +253,7 @@
                 </div>
             </div>
         </div>
-        <div class="page page_grey">
+        <div class="page page_blog">
             <div class="wrap">
                 <h2 class="page__title">Latest from Blog</h2>
                 <p class="page__subtitle">Some of the latest posts from my personal blog</p>
@@ -330,5 +347,15 @@
         </footer>
         <script src="../js/main.js"></script>
         <script src="../js/vendor.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            $('.block-carousel').slick({
+                dots: true,
+                arrows: false,
+            });
+            });
+        </script>
     </body>
 </html>
